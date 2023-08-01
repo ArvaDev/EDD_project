@@ -1,14 +1,13 @@
-package OrdenamientoAlfa;
 import java.util.Random;
+
+//Metodo de ordenamiento
 
 public class Main {
     public static void main(String[] args) {
-        int numCodes = 10;
-        int codeLength = 7;
         String[] codes = new String[numCodes];
 
-        for (int i = 0; i < numCodes; i++) {
-            codes[i] = generateAlphanumericCode(codeLength);
+        for (int i = 0; i < 10; i++) {
+            codes[i] = generateAlphanumericCode(7);
         }
 
         System.out.println("Códigos generados:");
@@ -24,6 +23,7 @@ public class Main {
         }
     }
 
+    // Metodo de creación de codigo 
     private static String generateAlphanumericCode(int length) {
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         StringBuilder sb = new StringBuilder();
@@ -35,6 +35,7 @@ public class Main {
         return sb.toString();
     }
 
+    //Metodo de ordenamiento
     private static void insertionSort(String[] arr) {
         int n = arr.length;
         for (int i = 1; i < n; i++) {
